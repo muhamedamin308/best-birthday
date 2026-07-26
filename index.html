@@ -1,252 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 25th, Nour</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 25th, Nour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- ambient floating particles layer -->
-<div class="particles" id="particles" aria-hidden="true"></div>
+  <!-- ambient floating particles layer -->
+  <div class="particles" id="particles" aria-hidden="true"></div>
 
-<!-- progress compass fixed corner -->
-<div class="compass" aria-hidden="true">
-  <svg viewBox="0 0 60 60" width="44" height="44">
-    <circle cx="30" cy="30" r="27" class="compass-ring"/>
-    <path d="M30 10 L34 30 L30 50 L26 30 Z" class="compass-needle" id="compassNeedle"/>
-  </svg>
-</div>
-
-<!-- ============ HERO ============ -->
-<section class="hero" id="hero">
-  <div class="hero-sky" aria-hidden="true">
-    <div class="blob blob-a"></div>
-    <div class="blob blob-b"></div>
-    <div class="blob blob-c"></div>
-  </div>
-
-  <p class="hero-eyebrow" data-reveal>an itinerary, of sorts</p>
-  <h1 class="hero-title">
-    <span class="line" data-reveal>Happy 25th</span>
-    <span class="line hero-name" data-reveal>Nour<span class="hero-dot">.</span></span>
-  </h1>
-  <p class="hero-sub" data-reveal>five years of your adventures, mapped &mdash; one stop at a time.</p>
-
-  <button class="scroll-cue" id="scrollCue" aria-label="Scroll to begin">
-    <span>begin the trip</span>
-    <svg width="16" height="24" viewBox="0 0 16 24" fill="none"><path d="M8 1V23M8 23L1 16M8 23L15 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-</section>
-
-<!-- ============ STATS / INTRO ============ -->
-<section class="intro" id="intro">
-  <div class="intro-inner">
-    <p class="intro-kicker" data-reveal>field notes</p>
-    <h2 class="intro-heading" data-reveal>You collect adventures the way other people collect souvenirs &mdash; and somehow, five years ago, I got to become one of them.</h2>
-    <div class="stat-row" data-reveal>
-      <div class="stat">
-        <span class="stat-num" data-count="5">0</span>
-        <span class="stat-label">years<br>as your friend</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-count="2021" data-nocommas="true">0</span>
-        <span class="stat-label">the year<br>it all began</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-count="25">0</span>
-        <span class="stat-label">trips around<br>the sun, today</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TRAIL (signature element) ============ -->
-<section class="trail" id="trail">
-  <p class="trail-kicker" data-reveal>the route so far</p>
-  <h2 class="trail-heading" data-reveal>Our trail</h2>
-
-  <div class="trail-map">
-    <svg class="trail-svg" id="trailSvg" viewBox="0 0 200 1400" preserveAspectRatio="none" aria-hidden="true">
-      <path id="trailPath" d="M100,10 C40,120 160,220 100,340 C40,460 160,560 100,680 C40,800 160,900 100,1020 C40,1140 160,1240 100,1390"
-            fill="none" stroke="url(#trailGradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
-      <defs>
-        <linearGradient id="trailGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#F0949F"/>
-          <stop offset="35%" stop-color="#E8A87C"/>
-          <stop offset="65%" stop-color="#C3AEE0"/>
-          <stop offset="100%" stop-color="#9FD3DD"/>
-        </linearGradient>
-      </defs>
+  <!-- progress compass fixed corner -->
+  <div class="compass" aria-hidden="true">
+    <svg viewBox="0 0 60 60" width="44" height="44">
+      <circle cx="30" cy="30" r="27" class="compass-ring" />
+      <path d="M30 10 L34 30 L30 50 L26 30 Z" class="compass-needle" id="compassNeedle" />
     </svg>
-
-    <div class="stop stop-left" data-reveal data-stamp="21.07.2021">
-      <div class="stop-pin"></div>
-      <div class="stop-card">
-        <span class="stop-date">21 July 2021</span>
-        <h3>&ldquo;Who is this Noor?&rdquo;</h3>
-        <p>The first day our paths crossed &mdash; the very first moment I clocked that you existed on this planet, and had absolutely no idea what was coming.</p>
-      </div>
-    </div>
-
-    <div class="stop stop-right" data-reveal data-stamp="11.08.2023">
-      <div class="stop-pin"></div>
-      <div class="stop-card">
-        <span class="stop-date">11 August 2023</span>
-        <h3>The day you planned, hour by hour</h3>
-        <p>You mapped out my entire day, from the second I opened my eyes to the second I closed them. Still, unreasonably, one of the best days of my life.</p>
-      </div>
-    </div>
-
-    <div class="stop stop-left" data-reveal data-stamp="15.01.2024">
-      <div class="stop-pin"></div>
-      <div class="stop-card">
-        <span class="stop-date">15 January 2024</span>
-        <h3>Late nights &amp; inside jokes</h3>
-        <p>A whole season of staying up too late, playing games we loved, telling stories, and somehow learning something new about each other every single time.</p>
-      </div>
-    </div>
-
-    <div class="stop stop-right" data-reveal data-stamp="25.07.2025">
-      <div class="stop-pin"></div>
-      <div class="stop-card">
-        <span class="stop-date">25 July 2025</span>
-        <h3>The day I won't forget</h3>
-        <p>After the quiet, after the distance, after everything &mdash; a day I'll carry with me for a very long time.</p>
-      </div>
-    </div>
-
-    <div class="stop stop-left stop-final" data-reveal data-stamp="26.07.2026">
-      <div class="stop-pin stop-pin-final"></div>
-      <div class="stop-card">
-        <span class="stop-date">still going</span>
-        <h3>To be continued&hellip;</h3>
-        <p>Five years down, and I'm hoping for a lot more trail left to walk &mdash; whatever the next chapter looks like.</p>
-      </div>
-    </div>
   </div>
-</section>
 
-<!-- ============ ABOUT / TRAITS ============ -->
-<section class="about" id="about">
-  <p class="about-kicker" data-reveal>known associate of</p>
-  <h2 class="about-heading" data-reveal>Everything I'd write in your file</h2>
+  <!-- ambient music toggle -->
+  <button class="sound-toggle" id="soundToggle" aria-label="Play background music" aria-pressed="false"
+    title="Play ambient music">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
 
-  <div class="stamps" data-reveal>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#9992;</span>
-      <h3>Says yes to everything</h3>
-      <p>Every adventure, every plan, every "let's just go" &mdash; you're already halfway out the door.</p>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-sky" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
     </div>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#127909;</span>
-      <h3>Movie &amp; series connoisseur</h3>
-      <p>If it's on a screen and worth talking about for three hours after, you've probably already seen it.</p>
-    </div>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#10024;</span>
-      <h3>Talented, unreasonably so</h3>
-      <p>The kind of person who's good at things she hasn't even decided to take seriously yet.</p>
-    </div>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#127793;</span>
-      <h3>Still standing, still soft</h3>
-      <p>You've been through more than most people know, and somehow you never let it turn you hard. I'm so proud of you for that.</p>
-    </div>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#128188;</span>
-      <h3>Three years in, and thriving</h3>
-      <p>Graduated, working, doing it well &mdash; building the kind of life that was always going to suit you.</p>
-    </div>
-    <div class="stamp-card">
-      <span class="stamp-icon">&#128172;</span>
-      <h3>Impossible to run out of things to say to</h3>
-      <p>Five years of conversation and somehow we've never once gotten bored of each other.</p>
-    </div>
-  </div>
-</section>
 
-<!-- ============ GALLERY ============ -->
-<section class="gallery" id="gallery">
-  <p class="gallery-kicker" data-reveal>from the roll</p>
-  <h2 class="gallery-heading" data-reveal>Some proof you were there</h2>
+    <p class="hero-eyebrow" data-reveal>an itinerary, of sorts</p>
+    <h1 class="hero-title">
+      <span class="line" data-reveal>Happy 25th</span>
+      <span class="line hero-name" data-reveal>Nour<span class="hero-dot">.</span></span>
+    </h1>
+    <p class="hero-sub" data-reveal>five years of your adventures, mapped &mdash; one stop at a time.</p>
 
-  <div class="polaroids">
-    <button class="polaroid p1" data-reveal data-full="images/photo-coffee.jpg">
-      <img src="images/photo-coffee.jpg" alt="Nour smiling, holding a coffee">
-      <span class="polaroid-caption">coffee &amp; company</span>
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll to begin">
+      <span>begin the trip</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <path d="M8 1V23M8 23L1 16M8 23L15 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
     </button>
-    <button class="polaroid p2" data-reveal data-full="images/photo-glance.jpg">
-      <img src="images/photo-glance.jpg" alt="Nour glancing back over her shoulder">
-      <span class="polaroid-caption">golden hour</span>
-    </button>
-    <button class="polaroid p3" data-reveal data-full="images/photo-pink.jpg">
-      <img src="images/photo-pink.jpg" alt="Nour dressed up, laughing">
-      <span class="polaroid-caption">main character energy</span>
-    </button>
-    <button class="polaroid p4" data-reveal data-full="images/photo-green.jpg">
-      <img src="images/photo-green.jpg" alt="Nour outdoors near a decorated tree">
-      <span class="polaroid-caption">out &amp; about</span>
-    </button>
-    <button class="polaroid p5" data-reveal data-full="images/photo-navy.jpg">
-      <img src="images/photo-navy.jpg" alt="Nour dressed up for an event">
-      <span class="polaroid-caption">dressed to impress</span>
-    </button>
-  </div>
-</section>
+  </section>
 
-<!-- lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-  <img id="lightboxImg" src="" alt="">
-</div>
-
-<!-- ============ LETTER ============ -->
-<section class="letter-section" id="letterSection">
-  <p class="letter-kicker" data-reveal>one last stop</p>
-  <h2 class="letter-heading" data-reveal>A letter, sealed for you</h2>
-  <p class="letter-hint" data-reveal>go on, open it.</p>
-
-  <div class="envelope" id="envelope">
-    <div class="envelope-back"></div>
-    <div class="envelope-flap"></div>
-    <div class="envelope-seal" id="envelopeSeal">
-      <span>N</span>
-    </div>
-    <div class="envelope-letter" id="envelopeLetter">
-      <div class="letter-paper">
-        <p>The most influential people in my life, in every aspect &mdash; material and moral. The one who's always really there, no matter how much you think you fall short. The only person I can talk to about every part of my life without ever being judged. The best, smartest person who can untangle my scattered thoughts with one small conversation, and somehow &mdash; everything gets fixed. Is that magic, or what?</p>
-        <p>The most understanding person I've ever known, not exaggerating. A passionate person, no matter what life throws at you &mdash; and one day everything comes back better than before, and we start chasing our dreams again. A truly responsible person, a mountain walking on earth, who has endured a lot, patiently and quietly. I don't know how, but you carry it all with a light heart.</p>
-        <p>Let's take a simple walk through the past five years. 21 July 2021, the first time I saw you and wondered, "who is this Noor?" Days passed, and by 29 July we'd done our first thing together, our first real conversation. That's when I realized &mdash; unfortunately for me &mdash; you were a genuinely good person. 21 September, our first talk on Messenger. Then a first voice note, a first photo of you buried in study mode, a first game, a first WhatsApp chat &mdash; and then, unfortunately, time passed and I disappeared.</p>
-        <p>We found our way back on 6 May 2023, and the conversations picked up again, more and more, until we finally met in person through your friends on 8 July &mdash; you had a terrible cold that day, and it bothered me more than it should have. Then came 11 August, a day you planned for me from the second I opened my eyes to the second I closed them. One of the most beautiful, calm days of my life. After that, a whole stretch of staying up late, playing games, being your favorite pest &mdash; and one day in particular, 15 January 2024, that I still think about.</p>
-        <p>By coincidence, 23 December 2024 was your last message before I left for the army. I came back, and by June 2025 we were talking again. Then, completely by chance, I saw you at Roxy on 28 June. And then &mdash; 25 July 2025, the day I will never forget. We met again the next day so I could finally get my perfume (yes, mine). A hard stretch followed, one I hope never repeats, for either of us. 20 September was the last time I saw you in person; 22 December, your last message. Then on 13 April 2026, I called you by accident, and we talked again &mdash; and here we still are, living inside all of it.</p>
-        <p>The days pass and everything moves on, but the memories and the words stay exactly where they are, Noor. Truly, in every sense.</p>
-        <p>Every single year, you're my friend and my companion &mdash; the most sincere, most honorable, most wonderful, most stylish, wisest person I know. Happy birthday, Noor. You are, every year, someone it's genuinely never tiring to be around. However much I say, it still won't cover how unique you are. I hope, from my heart, that God eases your heart, brings you joy, and keeps you safe in every step and heard in every prayer.</p>
-        <p>I'm proud to be part of this journey with you, however far it's gone. However many days, weeks, months, years pass &mdash; I hope you're still part of whatever comes next, in some way. You were, you are, and I hope you'll always be one of the best people I've ever known. Not an exaggeration. Truly one of the best things that's happened to me, in every sense.</p>
-        <p class="letter-sign">Happy birthday to the dearest of all.<br>Every year, the kindest, most beautiful Noor. &hearts;</p>
+  <!-- ============ STATS / INTRO ============ -->
+  <section class="intro" id="intro">
+    <div class="intro-inner">
+      <p class="intro-kicker" data-reveal>field notes</p>
+      <h2 class="intro-heading" data-reveal>You collect adventures the way other people collect souvenirs &mdash; and
+        somehow, five years ago, I got to become one of them.</h2>
+      <div class="stat-row" data-reveal>
+        <div class="stat">
+          <span class="stat-num" data-count="5">0</span>
+          <span class="stat-label">years<br>as your friend</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2021" data-nocommas="true">0</span>
+          <span class="stat-label">the year<br>it all began</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="25">0</span>
+          <span class="stat-label">trips around<br>the sun, today</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ CLOSING ============ -->
-<section class="closing" id="closing">
-  <div class="hero-sky closing-sky" aria-hidden="true">
-    <div class="blob blob-a"></div>
-    <div class="blob blob-b"></div>
-  </div>
-  <p class="closing-kicker" data-reveal>end of the road, for now</p>
-  <h2 class="closing-title" data-reveal>Happy Birthday,<br>Nour.</h2>
-  <p class="closing-sub" data-reveal>here's to whatever adventure comes next &mdash; I'm hoping I'm in it.</p>
-  <button class="wish-btn" id="wishBtn" data-reveal>make a wish</button>
-  <p class="closing-foot">made with a lot of love, for your 25th trip around the sun.</p>
-</section>
+  <!-- ============ TRAIL (signature element) ============ -->
+  <section class="trail" id="trail">
+    <p class="trail-kicker" data-reveal>the route so far</p>
+    <h2 class="trail-heading" data-reveal>Our trail</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-<script src="script.js"></script>
+    <div class="trail-map">
+      <span class="trail-traveler" id="trailTraveler" aria-hidden="true">&#9992;&#65039;</span>
+      <svg class="trail-svg" id="trailSvg" viewBox="0 0 200 1400" preserveAspectRatio="none" aria-hidden="true">
+        <path id="trailPath"
+          d="M100,10 C40,120 160,220 100,340 C40,460 160,560 100,680 C40,800 160,900 100,1020 C40,1140 160,1240 100,1390"
+          fill="none" stroke="url(#trailGradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1"
+          stroke-dashoffset="1" />
+        <defs>
+          <linearGradient id="trailGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F0949F" />
+            <stop offset="35%" stop-color="#E8A87C" />
+            <stop offset="65%" stop-color="#C3AEE0" />
+            <stop offset="100%" stop-color="#9FD3DD" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="stop stop-left" data-reveal data-stamp="21.07.2021">
+        <div class="stop-pin"></div>
+        <div class="stop-card">
+          <span class="stop-date">21 July 2021</span>
+          <h3>&ldquo;Who is this Nour?&rdquo;</h3>
+          <p>The first day our paths crossed &mdash; the very first moment I clocked that you existed on this planet,
+            and had absolutely no idea what was coming.</p>
+        </div>
+      </div>
+
+      <div class="stop stop-right" data-reveal data-stamp="11.08.2023">
+        <div class="stop-pin"></div>
+        <div class="stop-card">
+          <span class="stop-date">11 August 2023</span>
+          <h3>The day you planned, hour by hour</h3>
+          <p>You mapped out my entire day, from the second I opened my eyes to the second I closed them. Still,
+            unreasonably, one of the best days of my life.</p>
+        </div>
+      </div>
+
+      <div class="stop stop-left" data-reveal data-stamp="15.01.2024">
+        <div class="stop-pin"></div>
+        <div class="stop-card">
+          <span class="stop-date">15 January 2024</span>
+          <h3>Late nights &amp; inside jokes</h3>
+          <p>A whole season of staying up too late, playing games we loved, telling stories, and somehow learning
+            something new about each other every single time.</p>
+        </div>
+      </div>
+
+      <div class="stop stop-right" data-reveal data-stamp="25.07.2025">
+        <div class="stop-pin"></div>
+        <div class="stop-card">
+          <span class="stop-date">25 July 2025</span>
+          <h3>The day I won't forget</h3>
+          <p>After the quiet, after the distance, after everything &mdash; a day I'll carry with me for a very long
+            time.</p>
+        </div>
+      </div>
+
+      <div class="stop stop-left stop-final" data-reveal data-stamp="26.07.2026">
+        <div class="stop-pin stop-pin-final"></div>
+        <div class="stop-card">
+          <span class="stop-date">still going</span>
+          <h3>To be continued&hellip;</h3>
+          <p>Five years down, and I'm hoping for a lot more trail left to walk &mdash; whatever the next chapter looks
+            like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / TRAITS ============ -->
+  <section class="about" id="about">
+    <p class="about-kicker" data-reveal>known associate of</p>
+    <h2 class="about-heading" data-reveal>Everything I'd write in your file</h2>
+
+    <div class="stamps" data-reveal>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#9992;</span>
+        <h3>Says yes to everything</h3>
+        <p>Every adventure, every plan, every "let's just go" &mdash; you're already halfway out the door.</p>
+      </div>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#127909;</span>
+        <h3>Movie &amp; series connoisseur</h3>
+        <p>If it's on a screen and worth talking about for three hours after, you've probably already seen it.</p>
+      </div>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#10024;</span>
+        <h3>Talented, unreasonably so</h3>
+        <p>The kind of person who's good at things she hasn't even decided to take seriously yet.</p>
+      </div>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#127793;</span>
+        <h3>Still standing, still soft</h3>
+        <p>You've been through more than most people know, and somehow you never let it turn you hard. I'm so proud of
+          you for that.</p>
+      </div>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#128188;</span>
+        <h3>Three years in, and thriving</h3>
+        <p>Graduated, working, doing it well &mdash; building the kind of life that was always going to suit you.</p>
+      </div>
+      <div class="stamp-card">
+        <span class="stamp-icon">&#128172;</span>
+        <h3>Impossible to run out of things to say to</h3>
+        <p>Five years of conversation and somehow we've never once gotten bored of each other.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <p class="gallery-kicker" data-reveal>from the roll</p>
+    <h2 class="gallery-heading" data-reveal>Some proof you were there</h2>
+
+    <div class="polaroids">
+      <button class="polaroid p1" data-reveal data-full="images/photo-coffee.jpg" data-rot="-4">
+        <img src="images/photo-coffee.jpg" alt="Nour smiling, holding a coffee">
+        <span class="polaroid-caption">coffee &amp; company</span>
+      </button>
+      <button class="polaroid p2" data-reveal data-full="images/photo-glance.jpg" data-rot="3">
+        <img src="images/photo-glance.jpg" alt="Nour glancing back over her shoulder">
+        <span class="polaroid-caption">golden hour</span>
+      </button>
+      <button class="polaroid p3" data-reveal data-full="images/photo-pink.jpg" data-rot="-2">
+        <img src="images/photo-pink.jpg" alt="Nour dressed up, laughing">
+        <span class="polaroid-caption">main character energy</span>
+      </button>
+      <button class="polaroid p4" data-reveal data-full="images/photo-green.jpg" data-rot="4">
+        <img src="images/photo-green.jpg" alt="Nour outdoors near a decorated tree">
+        <span class="polaroid-caption">out &amp; about</span>
+      </button>
+      <button class="polaroid p5" data-reveal data-full="images/photo-navy.jpg" data-rot="-3">
+        <img src="images/photo-navy.jpg" alt="Nour dressed up for an event">
+        <span class="polaroid-caption">dressed to impress</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- ============ LETTER ============ -->
+  <section class="letter-section" id="letterSection">
+    <p class="letter-kicker" data-reveal>one last stop</p>
+    <h2 class="letter-heading" data-reveal>A letter, sealed for you</h2>
+    <p class="letter-hint" data-reveal>go on, open it.</p>
+
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-seal" id="envelopeSeal">
+        <span>N</span>
+      </div>
+      <div class="envelope-letter" id="envelopeLetter">
+        <div class="letter-paper">
+          <p class="letter-line">The most influential people in my life, in every aspect &mdash; material and moral. The
+            one who's always really there, no matter how much you think you fall short. The only person I can talk to
+            about every part of my life without ever being judged. The best, smartest person who can untangle my
+            scattered thoughts with one small conversation, and somehow &mdash; everything gets fixed. Is that magic, or
+            what?</p>
+          <p class="letter-line">The most understanding person I've ever known, not exaggerating. A passionate person,
+            no matter what life throws at you &mdash; and one day everything comes back better than before, and we start
+            chasing our dreams again. A truly responsible person, a mountain walking on earth, who has endured a lot,
+            patiently and quietly. I don't know how, but you carry it all with a light heart.</p>
+          <p class="letter-line">Let's take a simple walk through the past five years. 21 July 2021, the first time I
+            saw you and wondered, "who is this Nour?" Days passed, and by 29 July we'd done our first thing together,
+            our first real conversation. That's when I realized &mdash; unfortunately for me &mdash; you were a
+            genuinely good person. 21 September, our first talk on Messenger. Then a first voice note, a first photo of
+            you buried in study mode, a first game, a first WhatsApp chat &mdash; and then, unfortunately, time passed
+            and I disappeared.</p>
+          <p class="letter-line">We found our way back on 6 May 2023, and the conversations picked up again, more and
+            more, until we finally met in person through your friends on 8 July &mdash; you had a terrible cold that
+            day, and it bothered me more than it should have. Then came 11 August, a day you planned for me from the
+            second I opened my eyes to the second I closed them. One of the most beautiful, calm days of my life. After
+            that, a whole stretch of staying up late, playing games, being your favorite pest &mdash; and one day in
+            particular, 15 January 2024, that I still think about.</p>
+          <p class="letter-line">By coincidence, 23 December 2024 was your last message before I left for the army. I
+            came back, and by June 2025 we were talking again. Then, completely by chance, I saw you at Roxy on 28 June.
+            And then &mdash; 25 July 2025, the day I will never forget. We met again the next day so I could finally get
+            my perfume (yes, mine). A hard stretch followed, one I hope never repeats, for either of us. 20 September
+            was the last time I saw you in person; 22 December, your last message. Then on 13 April 2026, I called you
+            by accident, and we talked again &mdash; and here we still are, living inside all of it.</p>
+          <p class="letter-line">The days pass and everything moves on, but the memories and the words stay exactly
+            where they are, Nour. Truly, in every sense.</p>
+          <p class="letter-line">Every single year, you're my friend and my companion &mdash; the most sincere, most
+            honorable, most wonderful, most stylish, wisest person I know. Happy birthday, Nour. You are, every year,
+            someone it's genuinely never tiring to be around. However much I say, it still won't cover how unique you
+            are. I hope, from my heart, that God eases your heart, brings you joy, and keeps you safe in every step and
+            heard in every prayer.</p>
+          <p class="letter-line">I'm proud to be part of this journey with you, however far it's gone. However many
+            days, weeks, months, years pass &mdash; I hope you're still part of whatever comes next, in some way. You
+            were, you are, and I hope you'll always be one of the best people I've ever known. Not an exaggeration.
+            Truly one of the best things that's happened to me, in every sense.</p>
+          <p class="letter-line letter-sign">Happy birthday to the dearest of all.<br>Every year, the kindest, most
+            beautiful Nour. &hearts;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="closing" id="closing">
+    <div class="hero-sky closing-sky" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+    </div>
+    <p class="closing-kicker" data-reveal>end of the road, for now</p>
+    <h2 class="closing-title" data-reveal>Happy Birthday,<br>Nour.</h2>
+    <p class="closing-sub" data-reveal>here's to whatever adventure comes next &mdash; I'm hoping I'm in it.</p>
+    <button class="wish-btn" id="wishBtn" data-reveal>make a wish</button>
+    <p class="closing-foot">made with a lot of love, for your 25th trip around the sun.</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tone@14.8.49/build/Tone.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

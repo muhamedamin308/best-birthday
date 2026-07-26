@@ -10,6 +10,11 @@
   --rose-deep: #DE7488;
   --lavender: #C6AEE0;
   --sky: #9ED4DC;
+  --sage: #9FCB94;
+  --peach-deep: #C97B45;
+  --sage-deep: #4F8C55;
+  --lavender-deep: #8C6FB0;
+  --sky-deep: #3F8A96;
   --ink: #3B2A33;
   --ink-soft: #7A6570;
   --ink-faint: #B9A9AF;
@@ -129,11 +134,12 @@ section{
 }
 .hero-sky{
   position: absolute;
-  inset: 0;
+  inset: -3%;
   overflow: hidden;
   z-index: 0;
   background:
     radial-gradient(ellipse 70% 50% at 50% 0%, var(--cream-deep) 0%, var(--cream) 60%);
+  transition: transform 0.3s ease-out;
 }
 .blob{
   position: absolute;
@@ -222,6 +228,22 @@ section{
   font-size: 0.7rem;
   color: var(--rose-deep);
   margin: 0 0 1rem;
+}
+.trail-kicker{ color: var(--peach-deep); }
+.about-kicker{ color: var(--sage-deep); }
+.letter-kicker{ color: var(--lavender-deep); }
+
+.trail{
+  background: radial-gradient(ellipse 80% 55% at 50% 0%, rgba(243,184,138,0.16), transparent 70%);
+}
+.about{
+  background: radial-gradient(ellipse 80% 55% at 50% 100%, rgba(159,203,148,0.15), transparent 70%);
+}
+.gallery{
+  background: radial-gradient(ellipse 80% 55% at 50% 0%, rgba(239,147,160,0.14), transparent 70%);
+}
+.letter-section{
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(198,174,224,0.17), transparent 70%);
 }
 .intro-heading{
   font-family: var(--font-display);
@@ -369,13 +391,27 @@ section{
   border-radius: 16px;
   padding: 1.8rem 1.6rem;
   background: var(--paper);
-  transition: transform 0.35s cubic-bezier(.19,1,.22,1), box-shadow 0.35s;
+  transition: transform 0.2s ease-out, box-shadow 0.35s;
 }
 .stamp-card:hover{
-  transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 34px -20px rgba(59,42,51,0.35);
 }
-.stamp-icon{ font-size: 1.6rem; display: block; margin-bottom: 0.9rem; }
+.stamp-icon{
+  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-bottom: 0.9rem;
+}
+.stamp-card:nth-child(6n+1) .stamp-icon{ background: rgba(243,184,138,0.35); }
+.stamp-card:nth-child(6n+2) .stamp-icon{ background: rgba(239,147,160,0.3); }
+.stamp-card:nth-child(6n+3) .stamp-icon{ background: rgba(198,174,224,0.32); }
+.stamp-card:nth-child(6n+4) .stamp-icon{ background: rgba(159,203,148,0.32); }
+.stamp-card:nth-child(6n+5) .stamp-icon{ background: rgba(158,212,220,0.32); }
+.stamp-card:nth-child(6n+6) .stamp-icon{ background: rgba(222,116,136,0.28); }
 .stamp-card h3{
   font-family: var(--font-display);
   font-weight: 500;
@@ -424,7 +460,7 @@ section{
   border: none;
   border-radius: 4px;
   box-shadow: 0 16px 30px -16px rgba(59,42,51,0.4);
-  transition: transform 0.4s cubic-bezier(.19,1,.22,1), box-shadow 0.4s;
+  transition: transform 0.2s ease-out, box-shadow 0.3s ease;
   text-align: center;
 }
 .polaroid img{
@@ -447,7 +483,6 @@ section{
 .p4{ transform: rotate(4deg); margin-top: 1rem; }
 .p5{ transform: rotate(-3deg); }
 .polaroid:hover{
-  transform: rotate(0deg) translateY(-8px) scale(1.04);
   box-shadow: 0 26px 44px -18px rgba(59,42,51,0.45);
   z-index: 2;
 }
@@ -631,4 +666,156 @@ section{
 
 @media (max-width: 600px){
   section{ padding: 5.5rem 1.25rem; }
+}
+
+/* ========================================================
+   SOUND TOGGLE
+======================================================== */
+.sound-toggle{
+  position: fixed;
+  top: 1.75rem;
+  right: 5.6rem;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-faint);
+  background: rgba(255,253,249,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  opacity: 0.9;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.sound-toggle:hover{ background: rgba(255,253,249,0.95); }
+.sound-toggle .bar{
+  width: 3px;
+  height: 9px;
+  background: var(--ink-soft);
+  border-radius: 2px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+.sound-toggle.is-playing .bar{
+  background: var(--rose-deep);
+  animation: eqBar 0.9s ease-in-out infinite;
+}
+.sound-toggle.is-playing .bar:nth-child(2){ animation-delay: 0.15s; }
+.sound-toggle.is-playing .bar:nth-child(3){ animation-delay: 0.3s; }
+@keyframes eqBar{
+  0%, 100%{ height: 7px; }
+  50%{ height: 17px; }
+}
+@media (max-width: 640px){
+  .sound-toggle{ top: 1.2rem; right: 1.2rem; width: 38px; height: 38px; }
+}
+
+/* --- music hint tooltip --- */
+.sound-hint{
+  position: fixed;
+  top: 4.8rem;
+  right: 4.2rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+  animation: hintFadeIn 1.2s ease 2s both;
+}
+.sound-hint-arrow{
+  font-size: 1.1rem;
+  color: var(--rose-deep);
+  line-height: 1;
+  animation: hintBounce 1.4s ease-in-out infinite;
+}
+.sound-hint-text{
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--ink-faint);
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  box-shadow: 0 4px 14px -4px rgba(59,42,51,0.18);
+  white-space: nowrap;
+}
+@keyframes hintBounce{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-5px); }
+}
+@keyframes hintFadeIn{
+  from{ opacity: 0; transform: translateY(6px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+.sound-hint-hide{
+  opacity: 0 !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+@media (max-width: 640px){
+  .sound-hint{ top: 4rem; right: 0.2rem; }
+}
+
+/* ========================================================
+   TRAIL TRAVELER
+======================================================== */
+.trail-traveler{
+  position: absolute;
+  font-size: 1.3rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 4px 6px rgba(59,42,51,0.35));
+  transition: left 0.06s linear, top 0.06s linear, opacity 0.4s ease;
+  will-change: left, top;
+}
+
+/* ========================================================
+   CURSOR SPARKLES
+======================================================== */
+.sparkle-dot{
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 70;
+  transform: translate(-50%, -50%);
+  animation: sparkleFade 0.7s ease-out forwards;
+}
+@keyframes sparkleFade{
+  0%{ opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
+  100%{ opacity: 0; transform: translate(-50%, -50%) scale(0.2) translateY(-16px); }
+}
+
+/* ========================================================
+   FLOATING HEARTS (envelope open burst)
+======================================================== */
+.floating-heart{
+  position: fixed;
+  font-size: 1.25rem;
+  pointer-events: none;
+  z-index: 60;
+  animation: heartFloat 2.4s ease-out forwards;
+}
+@keyframes heartFloat{
+  0%{ transform: translate(0, 0) scale(0.6); opacity: 0; }
+  15%{ opacity: 1; }
+  100%{ transform: translate(var(--drift, 0px), -170px) scale(1.1); opacity: 0; }
+}
+
+/* ========================================================
+   LETTER LINE STAGGERED REVEAL
+======================================================== */
+.letter-line{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.letter-line.reveal{
+  opacity: 1;
+  transform: translateY(0);
 }
